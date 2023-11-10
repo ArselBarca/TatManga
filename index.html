@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Татманга. Татар телендә манга укыгыз!</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="import" href="read.html">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <a id="reloadLink" class="logo" href="#">ТатМанга</a>
+            <div class="rightPartNav">
+                <button id="themeButton" class="changeTheme" onclick="toggleTheme()">🌙</button>
+                <a class="tg" href="https://t.me/tatmanga"><img class="tgLogo" src="/img/tg.png" alt=""></a>
+                <form id="search-form" class="searcher">
+                  <input class="zapros" type="text" id="search-input" placeholder="Манга эзләү">
+                  <button class="poisk" type="submit">Эзләү</button>
+                </form>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <div class="maturliq"></div>
+        <div class="all">
+            <div class="manga-list">
+                <div class="manga-block jojomanga" onclick="goToRead('jojo')">
+                    <img src="/manga/jojo/chapter14/cover.jpg" alt="JoJo">
+                    <h2>ДжоДжоның гаҗәеп маҗаралары: җанлы кан</h2>
+                </div>
+                <div class="manga-block prototype" onclick="goToRead('prototype')">
+                    <img src="/manga/prototype/prototype0001.jpg" alt="prototype">
+                    <h2>Прототип</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

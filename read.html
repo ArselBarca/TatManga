@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Чтение манги</title>
+    <link rel="stylesheet" type="text/css" href="/css/read.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="image-container"></div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const mangaName = urlParams.get('manga');
+
+        fetch('/manga/pages.json')
+            .then(response => response.json())
+            .then(data => {
+                if (data.hasOwnProperty(mangaName)) {
+                    const pages = data[mangaName];
+
+                    const imageContainer = document.getElementById('image-container');
+                    pages.forEach(page => {
+                        const image = document.createElement('img');
+                        image.src = page;
+                        imageContainer.appendChild(image);
+                    });
+                }
+            });
+    </script>
+</body>
+</html>
